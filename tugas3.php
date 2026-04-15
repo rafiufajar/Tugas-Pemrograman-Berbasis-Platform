@@ -1,12 +1,10 @@
 <?php
 
-// ######## ARRAY FUNCTION ########
-// ################################
-
 $storage_1 = ['Bow','Axe','Sword','Potion','Potion','Beef'];
 $storage_2 = ['Knife','Arrow','Rope'];
 // $storage_1 = array_merge($storage_1,$storage_2);
 array_push($storage_2, 'Bandage','Arrow','Arrow');
+// $storage_2 = array_unique($storage_2);
 array_unshift($storage_1,'Lighter');
 array_pop($storage_1);
 array_shift($storage_2);
@@ -33,6 +31,25 @@ echo "Total Item In Storage = " . $total_str . "\n";
 // $location = array_search('Sword',$storage_1);
 // echo $location;
 
+// $loot = array_slice($storage_1,0,2);
+// print_r($loot);
 
+if (is_array($storage_1)) {
+    echo "Array\n";
+} else {
+    echo "Bukan Array\n";
+}
 
+// shuffle($storage_1);
+// shuffle($storage_2);
+
+// $min = min(count($storage_1), count($storage_2));
+
+// for ($i = 0; $i < $min; $i++) {
+//     if (rand(0, 1)) {
+//         $temp = $storage_1[$i];
+//         $storage_1[$i] = $storage_2[$i];
+//         $storage_2[$i] = $temp;
+//     }
+// }
 ?>  
